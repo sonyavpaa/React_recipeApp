@@ -1,0 +1,102 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#root {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+body {
+  margin: 0;
+  font-family: "Courier New", Courier, monospace;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  height: 100%;
+}
+
+header,
+footer {
+  background-color: rgb(72, 169, 65);
+  color: white;
+}
+
+header {
+  padding: 1em 0 1em 0;
+}
+
+main {
+  min-height: 50vh;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+footer {
+  padding: 0.2em 0 0.2em 0;
+}
+
+nav ul {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+}
+
+li :first-child {
+  padding: 0 1em 0 1em;
+  text-decoration: none;
+  color: white;
+}
+
+li :first-child:hover {
+  color: black;
+}
+
+main div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+input {
+  margin-top: 1em;
+}
+
+/* CARD */
+
+.card {
+  display: flex;
+  flex-direction: column;
+  margin: 1em;
+}
+
+.cardMain {
+  display: flex;
+  flex-direction: row;
+}
+
+img {
+  width: 10em;
+  margin: 0 1em 0 0;
+}
+
+.cardMain li {
+  display: flex;
+}
+
+.cardFooter {
+  min-height: 5em;
+  width: 100%;
+  border: 1px solid rgb(165, 164, 164);
+  margin: 1em;
+}
+
+.cardFooter p {
+  margin: 1em 0 0 0;
+}

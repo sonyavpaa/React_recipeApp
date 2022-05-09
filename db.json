@@ -1,0 +1,19 @@
+{
+  "recipes": [
+    {
+      "id": 0,
+      "name": "cake",
+      "ingredients": ["flour", "egg", "milk"],
+      "instructions": "bake a cake",
+      "img": "https://handletheheat.com/wp-content/uploads/2015/03/Best-Birthday-Cake-with-milk-chocolate-buttercream-SQUARE.jpg"
+    },
+
+    {
+      "id": 1,
+      "name": "bread",
+      "ingredients": ["flour", "water", "yeast"],
+      "instructions": "bake a bread",
+      "img": "https://www.thespruceeats.com/thmb/9n3YM4RVKSWyUWQ0JCl7BwHrl1U=/4288x2848/filters:fill(auto,1)/loaf-of-bread-182835505-58a7008c5f9b58a3c91c9a14.jpg"
+    }
+  ]
+}
