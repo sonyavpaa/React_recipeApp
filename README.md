@@ -8,8 +8,9 @@ npm install react-router-dom@6
 ```
 
 To run db:
-´´´cli
+
+```cli
 npm install axios
 npm install json-server --save-dev
 npm run server
-´´´
+```
