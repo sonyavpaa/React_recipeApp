@@ -2,18 +2,32 @@
   "recipes": [
     {
       "id": 0,
-      "name": "cake",
+      "recipename": "cake",
+      "image": "https://handletheheat.com/wp-content/uploads/2015/03/Best-Birthday-Cake-with-milk-chocolate-buttercream-SQUARE.jpg",
+      "description": "",
       "ingredients": ["flour", "egg", "milk"],
-      "instructions": "bake a cake",
-      "img": "https://handletheheat.com/wp-content/uploads/2015/03/Best-Birthday-Cake-with-milk-chocolate-buttercream-SQUARE.jpg"
+      "amount": [1, 1, 2],
+      "unit": ["dl", "psc", "dl"],
+      "instructions": "bake a cake"
     },
-
     {
       "id": 1,
-      "name": "bread",
+      "recipename": "bread",
+      "image": "https://www.thespruceeats.com/thmb/9n3YM4RVKSWyUWQ0JCl7BwHrl1U=/4288x2848/filters:fill(auto,1)/loaf-of-bread-182835505-58a7008c5f9b58a3c91c9a14.jpg",
+      "description": "",
       "ingredients": ["flour", "water", "yeast"],
-      "instructions": "bake a bread",
-      "img": "https://www.thespruceeats.com/thmb/9n3YM4RVKSWyUWQ0JCl7BwHrl1U=/4288x2848/filters:fill(auto,1)/loaf-of-bread-182835505-58a7008c5f9b58a3c91c9a14.jpg"
+      "amount": [2, 1, 1],
+      "unit": ["dl", "dl", "g"],
+      "instructions": "bake a bread"
+    },
+    {
+      "id": 2,
+      "recipename": "carrot cake",
+      "description": "nice cake",
+      "image": "",
+      "country": "",
+      "ingredients": ["flour", "water", "yeast"],
+      "instructions": ""
     }
   ]
 }

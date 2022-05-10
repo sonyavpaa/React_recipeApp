@@ -11,6 +11,9 @@ const Nav = () => {
         <li>
           <Link to="recipelist">RecipeList</Link>
         </li>
+        <li>
+          <Link to="addrecipe">Add recipe</Link>
+        </li>
       </ul>
     </nav>
   );

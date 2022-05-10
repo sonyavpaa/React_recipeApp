@@ -19,13 +19,13 @@ const RecipeList = () => {
       </div>
       {recipes.map((recipe) => (
         <RecipeCard
-          key={recipe.name}
-          name={recipe.name}
+          key={recipe.recipename}
+          name={recipe.recipename}
           instructions={recipe.instructions}
           ingredients={recipe.ingredients.map((ingredient) => (
             <li key={ingredient}>o {ingredient}</li>
           ))}
-          img={recipe.img}
+          img={recipe.image}
         />
       ))}
 
