@@ -3,16 +3,27 @@ import { Link } from "react-router-dom";
 
 const RecipeCard = (props) => {
   return (
-    <div className="card">
-      <h3>{props.name}</h3>
-      <div class="cardMain">
-        <img src={props.img} alt={props.name} />
-        <ul>{props.ingredients}</ul>
+    <div className="cardFrame">
+      <div className="imgFrame">
+        <img className="imgCard" src={props.img} alt={props.alt} />
       </div>
-      <div class="cardFooter">
-        <p>{props.instructions}</p>
+
+      <div className="cardInfo">
+        <div className="cardInfoHeader">
+          <h3>{props.name}</h3>
+          <img
+            src={props.countryflag}
+            className="cardCountryFlag"
+            alt={props.altFlag}
+          />
+        </div>
+        <div className="cardInfoMain">
+          <p>{props.description}</p>
+        </div>
       </div>
-      <Link to={props.name}>See more!</Link>
+      <Link className="linkCard" to={props.name} state={props.data}>
+        See more!
+      </Link>
     </div>
   );
 };

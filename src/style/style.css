@@ -21,25 +21,33 @@ body {
 
 header,
 footer {
-  background-color: rgb(72, 169, 65);
+  background-color: rgb(65, 77, 85);
   color: white;
 }
 
 header {
   padding: 1em 0 1em 0;
+  z-index: 2;
 }
 
 main {
-  min-height: 50vh;
+  min-height: 100vh;
   text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  z-index: 0;
 }
 
 footer {
   padding: 0.2em 0 0.2em 0;
+  min-height: 2em;
+  z-index: 2;
+}
+
+nav {
+  z-index: 3;
 }
 
 nav ul {
@@ -65,38 +73,349 @@ main div {
 }
 
 input {
-  margin-top: 1em;
+  margin-top: 0.5em;
+  font-family: "Courier New", Courier, monospace;
 }
 
-/* CARD */
+input:focus,
+textarea:focus {
+  outline: none;
+}
 
-.card {
+button,
+.button {
+  padding: 0.2em 1em 0.2em 1em;
+  color: white;
+  background-color: rgb(255, 162, 126);
+  border-radius: 2px;
+  border: 0.5px solid orange;
+  font-family: "Courier New", Courier, monospace;
+  font-weight: 1000;
+  cursor: pointer;
+}
+
+button {
+  font-weight: 400;
+  color: black;
+  background-color: white;
+  border: 0.5px solid orange;
+}
+
+/* RECIPE LIST */
+
+.searchBar {
+  padding: 0 1em 0 0em;
+}
+
+.listFrame {
+  width: 100%;
+  height: 100vh;
+}
+
+.cardsFrame {
   display: flex;
-  flex-direction: column;
-  margin: 1em;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
 }
 
-.cardMain {
+/* FORM */
+
+.submitMessage p {
+  color: red;
+}
+
+form {
+  width: 100vw;
+  min-height: 40em;
+}
+
+.formFrame {
+  width: 100%;
+  display: flex;
+}
+
+.formFrameMain {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+.left {
+  width: 50%;
+  align-items: flex-start;
+  min-height: 15em;
+  padding: 0 0 0 3em;
+}
+
+.nameUrl {
+  top: 2em;
   display: flex;
   flex-direction: row;
 }
 
-img {
-  width: 10em;
+.name,
+.url {
+  align-items: flex-start;
+  margin: 0 0 1em 0;
+}
+
+.url {
+  margin-left: 1em;
+}
+
+.descriptionSingle,
+.instructionsSingle,
+.countrySingle,
+.ingredientNameSingle,
+.amountSingle,
+.unitSingle {
+  align-items: flex-start;
+}
+
+.descriptionSingle label,
+.instructionsSingle label,
+.countrySingle label {
+  margin: 1em 0 1em 0;
+}
+
+.descriptionSingle textarea,
+.instructionsSingle textarea {
+  min-width: 50em;
+  min-height: 7em;
+}
+
+.left select {
+  border-style: none;
+  border: 0.5px solid black;
+  padding: 0.5em;
+  font-family: "Courier New", Courier, monospace;
+  background-color: white;
+}
+
+.right {
+  width: 50%;
+  align-items: flex-start;
+  min-height: 15em;
+  padding: 3em 0 0 3em;
+}
+
+.ingredientFrame {
+  top: 2em;
+  width: 100%;
+  margin: 0 0 2em 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.amountSingle label,
+.unitSingle label {
+  margin: 1em 0 0 0;
+}
+
+.amountUnit {
+  display: flex;
+  flex-direction: row;
+}
+
+.unitSingle {
+  margin: 0 0 0 1em;
+}
+
+.right select {
+  margin: 0.5em 0 0 0;
+  border-style: none;
+  border-radius: 1em;
+  border: 0.5px solid black;
+  padding: 0.1em;
+  font-family: "Courier New", Courier, monospace;
+  background-color: white;
+}
+
+/* CARD */
+
+.cardFrame {
+  display: flex;
+  width: 20em;
+  min-height: 18em;
+  flex-direction: column;
+  margin: 1em;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+  border-radius: 1%;
+}
+
+.imgFrame {
+  min-height: 10em;
+  width: 100%;
+}
+
+.imgCard {
+  width: 100%;
+  height: 10em;
+  border-radius: 1% 1% 0 0;
+  object-fit: cover;
+  line-height: 5em;
+}
+
+.infoFrame {
+  display: inline;
+}
+
+.cardInfo {
+  width: 100%;
+  margin: 0.5em 0 0 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.cardInfoHeader {
+  width: 100%;
+  height: 2em;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.cardInfoHeader h3 {
+  margin: 0.2em 0 0 0.5em;
+  width: 8em;
+  font-size: 0.9em;
+  text-align: start;
+
+  word-break: keep-all;
+}
+
+.cardCountryFlag {
+  margin: 0 0.5em 0 0;
+  width: 2em;
+}
+
+.cardInfoMain {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.cardInfoMain p {
+  margin: 1em 0.7em 0 0;
+  font-size: small;
+  min-height: 4em;
+  width: 100%;
+}
+
+.linkCard {
+  padding: 0 0 2em 0;
+  text-decoration: none;
+  color: chocolate;
+  cursor: pointer;
+}
+
+.linkCard:visited {
+  color: rgb(83, 196, 194);
+}
+
+/* SINGLE */
+
+.singleFrame {
+  width: 100%;
+}
+
+.backgroundImageFrame {
+  width: 100%;
+  height: 30em;
+  display: flex;
+  flex-direction: column;
+}
+
+.backgroundImage {
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  height: 30em;
+  opacity: 80%;
+  position: absolute;
+  top: 3em;
+  z-index: 1;
+  filter: brightness(80%);
+}
+
+.backgroundImageFrameHeader {
+  width: 100%;
+  margin: 15em 0 0 0;
+  padding: 0 0 0 1em;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  color: white;
+  z-index: 2;
+}
+
+.singleFrameHeader {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  margin: 0 0 2em 0;
+}
+
+.countryInfo {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.countryInfo p {
   margin: 0 1em 0 0;
 }
 
-.cardMain li {
-  display: flex;
-}
-
-.cardFooter {
-  min-height: 5em;
+.singleFrameMain {
   width: 100%;
-  border: 1px solid rgb(165, 164, 164);
-  margin: 1em;
+  z-index: 2;
+  display: flex;
+  flex-direction: row;
 }
 
-.cardFooter p {
-  margin: 1em 0 0 0;
+.singleCountryFlag {
+  margin: 0 0.5em 0 0;
+  width: 2em;
+}
+
+.ingredients {
+  width: 50%;
+  min-height: 10em;
+  align-items: flex-start;
+  margin: 0 0 0 3em;
+}
+
+.ingredients h4 {
+  padding: 0 0 1em 0;
+}
+
+.ingredients ul {
+  width: 90%;
+  text-align: start;
+  list-style: none;
+}
+
+.ingredients li {
+  padding: 0.5em 0 0.5em 0;
+  border-bottom: 1px solid black;
+}
+
+.instructions {
+  width: 100%;
+  min-height: 10em;
+  text-align: start;
+  margin: 0 0 0 1em;
+  align-items: flex-start;
+}
+
+.instructions h4 {
+  width: 100%;
+  padding: 0 0 1em 0;
 }

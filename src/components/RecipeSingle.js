@@ -1,41 +1,56 @@
-import { React, Component } from "react";
-import { Outlet } from "react-router-dom";
-import { useParams } from "react-router-dom";
+import { React } from "react";
+import { useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 
-class RecipeSingle extends Component {
-  state = {
-    data: [],
-    isLoading: false,
-  };
+const RecipeSingle = () => {
+  const location = useLocation();
+  const recipe = location.state;
 
-  componentDidMount() {
-    this.setState({ isLoading: true });
-    fetch(`https://pokeapi.co/api/v2/pokemon/${this.props.params.pokesingle}`)
-      .then((response) => response.json())
-      .then((response) => {
-        // console.log(response);
-        this.setState({ data: response });
-      });
-  }
-
-  render() {
-    return (
-      <div className="recipesingle">
-        <h3>{this.props.params.pokesingle}</h3>
-        <img
-          src={
-            this.state.data.sprites?.versions["generation-v"]["black-white"]
-              .animated.front_default
-          }
-        ></img>
-        <ul>
-          {this.state.data.types?.map((type) => {
-            return <li key={type?.type?.name}>{type?.type?.name}</li>;
-          })}
-        </ul>
+  return (
+    <div className="singleFrame">
+      <div className="backgroundImageFrame">
+        <div
+          className="backgroundImage"
+          style={{
+            backgroundImage: " url(" + recipe.image + ")",
+          }}
+        ></div>
+        <div className="backgroundImageFrameHeader">
+          <h1>{recipe.recipename}</h1>
+          <p>{recipe.description}</p>
+        </div>
       </div>
-    );
-  }
-}
+      <div className="singleFrameHeader">
+        <div className="countryInfo">
+          <p>{recipe.country?.name}</p>
+          <img
+            className="singleCountryFlag"
+            src={recipe.country?.flag}
+            alt={recipe.country?.name}
+          ></img>
+        </div>
+      </div>
+      <div className="singleFrameMain">
+        <div className="ingredients">
+          <h4>You need:</h4>
+          <ul>
+            {recipe.ingredients.map((ingredient) => (
+              <li key={ingredient.ingredientName}>
+                {ingredient.amount} {ingredient.unit}
+                {"        "}
+                {ingredient.ingredientName}
+              </li>
+            ))}
+          </ul>
+        </div>
+        <div className="instructions">
+          <h4>You do:</h4>
+          <p>{recipe.instructions}</p>
+        </div>
+      </div>
+      <Link to="/recipelist">go back</Link>
+    </div>
+  );
+};
 
 export default RecipeSingle;

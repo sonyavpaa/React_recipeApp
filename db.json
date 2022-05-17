@@ -1,33 +1,126 @@
 {
   "recipes": [
     {
-      "id": 0,
-      "recipename": "cake",
-      "image": "https://handletheheat.com/wp-content/uploads/2015/03/Best-Birthday-Cake-with-milk-chocolate-buttercream-SQUARE.jpg",
-      "description": "",
-      "ingredients": ["flour", "egg", "milk"],
-      "amount": [1, 1, 2],
-      "unit": ["dl", "psc", "dl"],
-      "instructions": "bake a cake"
+      "recipename": "Zelany Borshch",
+      "description": "Best soup in town",
+      "country": {
+        "flag": "https://flagcdn.com/ua.svg",
+        "name": "Ukraine"
+      },
+      "image": "https://vikalinka.com/wp-content/uploads/2020/09/Sorrel-Soup-2-Edit.jpg",
+      "ingredients": [
+        {
+          "id": 1,
+          "ingredientName": "unsalted butter",
+          "amount": "2",
+          "unit": "tbsp"
+        },
+        {
+          "id": 2,
+          "ingredientName": "celery",
+          "amount": "1",
+          "unit": "psc"
+        },
+        {
+          "id": 3,
+          "ingredientName": "onion",
+          "amount": "1",
+          "unit": "psc"
+        },
+        {
+          "id": 4,
+          "ingredientName": "green onion",
+          "amount": "1",
+          "unit": "bunch"
+        },
+        {
+          "id": 5,
+          "ingredientName": "carrot",
+          "amount": "1",
+          "unit": "psc"
+        },
+        {
+          "id": 6,
+          "ingredientName": "vegetable broth",
+          "amount": "1",
+          "unit": "l"
+        },
+        {
+          "id": 7,
+          "ingredientName": "potatoes, peeled and diced",
+          "amount": "1",
+          "unit": "kg"
+        },
+        {
+          "id": 8,
+          "ingredientName": "dill, chopped",
+          "amount": "1",
+          "unit": "bunch"
+        },
+        {
+          "id": 9,
+          "ingredientName": "parsley, chopped",
+          "amount": "1",
+          "unit": "bunch"
+        },
+        {
+          "id": 10,
+          "ingredientName": "sorrel, chopped",
+          "amount": "1.5",
+          "unit": "l"
+        },
+        {
+          "id": 11,
+          "ingredientName": "salt and black pepper",
+          "amount": "",
+          "unit": "to taste"
+        },
+        {
+          "id": 12,
+          "ingredientName": "sour cream",
+          "amount": "2",
+          "unit": "dl"
+        },
+        {
+          "id": 13,
+          "ingredientName": "eggs",
+          "amount": "2",
+          "unit": "psc"
+        }
+      ],
+      "instructions": "Melt the butter in a large soup pot over medium heat. Add the celery and onion, carrot, parsnip if using and sauté, stirring, until the onion is softened, about 7 minutes. Add the scallions and sauté for another 5 minutes.\n\nAdd the stock to the soup pot and bring to a boil. Add the potatoes, then reduce the heat to medium low and simmer, partially covered, until the potatoes are tender, about 20 minutes.\n\nBring the soup to a boil. Add the chopped sorrel (sorrel and spinach if using)dill and parsly and cook until wilted, 3 minutes if using fresh and 10 minutes or so if using frozen. Add salt and pepper to taste.\n\nServe in soup bowls and garnish with chopped eggs if you wish and a dollop of sour cream or sweet cream and more chopped dill. Serves 4.\n\nVariation: When you add the potatoes don’t dice them just cut them in half. When they are tender remove with a slotted spoon, and set them aside. Bring the soup to a boil Add the sorrel, dill and parsly and cook till wilted. Remove from heat and add the salt and pepper.\n\nWorking in batches, process the soup in a food processor until the sorrel and spinach are finely minced. Transfer the soup to a tureen and stir in 1/2 cup of heavy or whipping cream. Cool, then refrigerate for 2 hours.\n\nDice the reserved potatoes and add them to the soup right before serving. Serve each soup portion garnished with 1 or 2 slices of egg and sour cream.",
+      "id": 1
     },
     {
-      "id": 1,
-      "recipename": "bread",
-      "image": "https://www.thespruceeats.com/thmb/9n3YM4RVKSWyUWQ0JCl7BwHrl1U=/4288x2848/filters:fill(auto,1)/loaf-of-bread-182835505-58a7008c5f9b58a3c91c9a14.jpg",
-      "description": "",
-      "ingredients": ["flour", "water", "yeast"],
-      "amount": [2, 1, 1],
-      "unit": ["dl", "dl", "g"],
-      "instructions": "bake a bread"
-    },
-    {
-      "id": 2,
-      "recipename": "carrot cake",
-      "description": "nice cake",
-      "image": "",
-      "country": "",
-      "ingredients": ["flour", "water", "yeast"],
-      "instructions": ""
+      "recipename": "Kilju",
+      "description": "Great refreshing drink!",
+      "country": {
+        "flag": "https://flagcdn.com/fi.svg",
+        "name": "Finland"
+      },
+      "image": "https://upload.wikimedia.org/wikipedia/commons/a/a4/Kiljun_valmistaminen.JPG",
+      "ingredients": [
+        {
+          "id": 1,
+          "ingredientName": "water",
+          "amount": "30",
+          "unit": "l"
+        },
+        {
+          "id": 2,
+          "ingredientName": "sugar",
+          "amount": "5",
+          "unit": "kg"
+        },
+        {
+          "id": 3,
+          "ingredientName": "yeast",
+          "amount": "1",
+          "unit": "psc"
+        }
+      ],
+      "instructions": "Put all ingredients into a pot and let it sit untill it turns into something else and enjoy!",
+      "id": 2
     }
   ]
 }
